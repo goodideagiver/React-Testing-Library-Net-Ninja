@@ -17,5 +17,17 @@ it('Should render correct amount of incomplete tasks', () => {
 it('Should render correct amount of incomplete 1', () => {
 	render(<MockTodoFooter numOfIncopmpleteTasks={1} />)
 	const paragraphEl = screen.getByText(/1 task left/i)
-	expect(paragraphEl).toBeInTheDocument()
+	expect(paragraphEl).toBeVisible()
+})
+
+it('Should render correct amount of incomplete 1 and contain', () => {
+	render(<MockTodoFooter numOfIncopmpleteTasks={1} />)
+	const paragraphEl = screen.getByText(/1 task left/i)
+	expect(paragraphEl).toContainHTML('p')
+})
+
+it('Should render correct amount of incomplete 1 to be', () => {
+	render(<MockTodoFooter numOfIncopmpleteTasks={1} />)
+	const paragraphEl = screen.getByText(/1 task left/i)
+	expect(paragraphEl.textContent).toBe('1 task left')
 })
