@@ -9,15 +9,15 @@ const MockFollowerList = () => (
 )
 
 describe('FollowersList', () => {
-  it('renders 5 card', async () => {
-    render(<MockFollowerList />)
+  // it('renders 5 card', async () => {
+  //   render(<MockFollowerList />)
 
-    const firstCard = await waitFor(
-      () => screen.findAllByTestId(/follower-item/i),
-      { timeout: 5000 }
-    )
-    expect(firstCard).toHaveLength(5)
-  })
+  //   const firstCard = await waitFor(
+  //     () => screen.findAllByTestId(/follower-item/i),
+  //     { timeout: 5000 }
+  //   )
+  //   expect(firstCard).toHaveLength(5)
+  // })
 
   it('renders first card', async () => {
     render(<MockFollowerList />)
